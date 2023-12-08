@@ -13,12 +13,16 @@
             <form name="entrada">
                 <fieldset>
                     <legend>Origem</legend>
-                    <label><input type="radio" name="origem" value="pomar" checked</label>
+                    <label><input type="radio" name="origem" value="pomar" checked/>Pomar</label>
+                    <label><input type="radio" name="origem" value="joao"/>Joao</label>
+                    <label><input type="radio" name="origem" value="maria"/>Maria</label>
                 </fieldset>
-                <label></label> type="radio" name="origem"
-                value="joao" />
-                <input type="radio" name="origem"
-                value="maria" />
+                <fieldset>
+                    <legend>Destino</legend>
+                    <label><input type="radio" name="destino" value="pomar"/>Pomar</label>
+                    <label><input type="radio" name="destino" value="joao"/>Joao</label>
+                    <label><input type="radio" name="destino" value="maria" checked/>Maria</label>
+                </fieldset>
                
                 <label for="ifruta">Fruta:</label>
                 <select id="ifruta" name="fruta">
@@ -29,14 +33,7 @@
                 </select>
                 <label for="iqtd">Quantidade:</label>
                 
-                <input 
-                    id="iqtd" 
-                    type="number" 
-                    name="quantidade"
-                    min="0" 
-                    max="12" 
-                    step="1"
-                />
+                <input id="iqtd" type="number" name="quantidade" min="0" max="12" step="1"/>
                 <button type="submit">Enviar</button>
             </form>
         </section>
