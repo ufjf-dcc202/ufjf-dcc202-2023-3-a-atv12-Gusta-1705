@@ -36,6 +36,20 @@ document.addEventListener('DOMContentLoaded', () =>
 
 atualizarTela();
 
+function atualizarTela() 
+{
+    const estoque = getEstoque();
+
+    olJoao.innerHTML = "";
+    olMaria.innerHTML = "";
+    
+    document.entrada.fruta.value = "maca";
+    document.entrada.quantidade.value = 1;
+   
+    preencherLista(olJoao, estoque.joao);
+    preencherLista(olMaria, estoque.maria);
+}
+
 function preencherLista(lista, estoqueDaPessoa)
 {
     lista.textContent = "";
@@ -50,18 +64,4 @@ function preencherLista(lista, estoqueDaPessoa)
             lista.appendChild(li);
         }
     }
-}
-
-function atualizarTela() 
-{
-    const estoque = getEstoque();
-
-    olJoao.innerHTML = "";
-    olMaria.innerHTML = "";
-    
-    document.entrada.fruta.value = "maca";
-    document.entrada.quantidade.value = 1;
-   
-    preencherLista(olJoao, estoque.joao);
-    preencherLista(olMaria, estoque.maria);
 }
