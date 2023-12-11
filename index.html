@@ -15,16 +15,16 @@
                 <fieldset>
                     <legend>Origem</legend>
                     <label><input type="radio" name="origem" value="pomar" checked/>Pomar</label>
-                    <label><input type="radio" name="origem" value="joao"/>Joao</label>
+                    <label><input type="radio" name="origem" value="joao"/>João</label>
                     <label><input type="radio" name="origem" value="maria"/>Maria</label>
                 </fieldset>
                 <fieldset>
                     <legend>Destino</legend>
                     <label><input type="radio" name="destino" value="pomar"/>Pomar</label>
-                    <label><input type="radio" name="destino" value="joao"/>Joao</label>
+                    <label><input type="radio" name="destino" value="joao"/>João</label>
                     <label><input type="radio" name="destino" value="maria" checked/>Maria</label>
                 </fieldset>
-               
+                
                 <label for="ifruta">Fruta:</label>
                 <select id="ifruta" name="fruta">
                     <option value="maca">Maçã</option>
@@ -32,16 +32,20 @@
                     <option value="banana">Banana</option>
                     <option value="uva">Uva</option>
                 </select>
-                <label for="iqtd">Quantidade:</label>
                 
-                <input id="iqtd" type="number" name="quantidade" min="0" max="12" step="1"/>
+                <label for="iqtd">Quantidade:</label>
+                <input id="iqtd" type="number" name="quantidade" value="1" min="0" max="12" step="1"/>
+                
                 <button type="submit">Enviar</button>
             </form>
         </section>
-        <section>
-            <h2>Estoque</h2>
-            <ol id="olMaria"></ol>
+        <section id="saida">
+            <h2>João</h2>
+            <ol id="joao"></ol>
+            <h2>Maria</h2>
+            <ol id="maria"></ol>
         </section>
     </main>
+    <button id="botaoLimparLista" type="button">Limpar Lista</button>
 </body>
 </html>
