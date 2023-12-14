@@ -17,7 +17,7 @@ export function limpaEstoque()
 
 export function transacaoNoEstoque(origem, destino, tipo, quantidade) 
 {
-    if(origem === destino || quantidade < 0) 
+    if(origem === destino || quantidade <= 0) 
     {
         return;
     }
@@ -34,7 +34,7 @@ export function transacaoNoEstoque(origem, destino, tipo, quantidade)
     
     if(destino === "pomar") 
     {
-        let itemEncontrado = estoque[origem].find(item => item.tipo === tipo);
+        const itemEncontrado = estoque[origem].find(item => item.tipo === tipo);
     
         if(itemEncontrado) 
         {
@@ -61,8 +61,8 @@ export function transacaoNoEstoque(origem, destino, tipo, quantidade)
 
     else
     {
-        let itemOrigem = estoque[origem].find(item => item.tipo === tipo);
-        let itemDestino = estoque[destino].find(item => item.tipo === tipo);
+        const itemOrigem = estoque[origem].find(item => item.tipo === tipo);
+        const itemDestino = estoque[destino].find(item => item.tipo === tipo);
 
         if(!itemOrigem)
         {
@@ -97,6 +97,3 @@ export function transacaoNoEstoque(origem, destino, tipo, quantidade)
     return;
 }
 //export { getEstoque, limpaEstoque, transacaoNoEstoque };
-
-
-
